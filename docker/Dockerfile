@@ -1,6 +1,6 @@
 FROM docker.io/maven:latest
 
-RUN svn co --username hjqi --password qhj840922  "svn://172.16.31.128/dockertest"  --force --no-auth-cache && \
+RUN git clone https://git.oschina.net/kidqhj/dockertest.git && \
 	cd dockertest && \
 	mvn package && \
 	echo finish building...
